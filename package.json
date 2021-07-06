@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "build": "tsc -w",
-    "start:dev": "nodemon dist/main.js"
+    "build": "rm -r dist && tsc -w",
+    "start:dev": "nodemon dist/main.js",
+    "start": "node dist/main.js"
   },
   "keywords": [],
   "author": "",

@@ -1,11 +1,12 @@
 import { Course } from "./interfaces/Course";
 import { Student } from "./models/Student";
 
-const MINEGRESAR = 0; // cantidad minima de puntaje para egresar
+const MINEGRESAR = 10; // cantidad minima de puntaje para egresar
 const MAXSTRESS = 0; // cantidad para nuestro toleracion de estress
 
 // funcion para nuestro egresar
 // funcion para nuestro nivel de estres
+// crearemos una funcion para encontrar la solucion pero esto se regira a travez de  MINEGRESAR
 
 function main(): void {
   const courses: Array<Course> = [
@@ -32,7 +33,9 @@ function main(): void {
 
   ];
 
-  const student = new Student(courses);
+  const student = new Student(courses, MINEGRESAR);
+  student.printCourses();
+  // student.listCourses();
 }
 
 main();
